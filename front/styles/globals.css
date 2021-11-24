@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Roboto:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Things that Tailwind could not do */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.marker-hide::marker,
+.marker-hide::-webkit-details-marker {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+details[open] summary svg {
+  transform: rotateX(-180deg);
+}
+
+#roadmap {
+  background-image: url("../public/background-roadmap.svg");
+  background-size: cover;
+}
+
+#rarity {
+  background-image: url("../public/background-rarity.svg");
+  background-size: cover;
+}
+
+#footer {
+  background-image: url("../public/background-footer.svg");
+  background-size: cover;
+}
+
+#background {
+  z-index: -1;
+  background-image: url("../public/background-hero.svg");
+}
+@media screen and (min-width: 1000px) {
+  #background {
+    background-size: cover;
+  }
+}
