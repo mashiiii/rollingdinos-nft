@@ -14,11 +14,7 @@ export default function Hero() {
           extinct, but they keep on rolling.
         </p>
       </div>
-      <img
-        src="hero-dino.webp"
-        alt="Rolling dino"
-        className="max-w-sm md:max-w-md md:my-auto"
-      />
+      <img src="hero-dino.webp" alt="Rolling dino" className=" md:max-w-md" />
     </section>
   );
 }
