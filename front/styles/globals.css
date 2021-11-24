@@ -28,23 +28,23 @@ details[open] summary svg {
 }
 
 #roadmap {
-  background-image: url("../public/background-roadmap.svg");
+  background-image: url("/background-roadmap.svg");
   background-size: cover;
 }
 
 #rarity {
-  background-image: url("../public/background-rarity.svg");
+  background-image: url("/background-rarity.svg");
   background-size: cover;
 }
 
 #footer {
-  background-image: url("../public/background-footer.svg");
+  background-image: url("/background-footer.svg");
   background-size: cover;
 }
 
 #background {
   z-index: -1;
-  background-image: url("../public/background-hero.svg");
+  background-image: url("/background-hero.svg");
 }
 @media screen and (min-width: 1000px) {
   #background {
