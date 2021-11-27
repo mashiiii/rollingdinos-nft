@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Faq from "../components/Faq";
 import Hero from "../components/Hero";
-import Rarity from "../components/Rarity";
+import Mission from "../components/Mission";
+import Nav from "../components/Nav";
 import Roadmap from "../components/Roadmap";
-import Footer from "../components/Footer";
+import Team from "../components/Team";
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Nav />
       <Roadmap />
-      <Rarity />
-      <Faq />
-      <Footer />
+      <Mission />
+      <Team />
     </>
   );
 };

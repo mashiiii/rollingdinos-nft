@@ -1,53 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Space+Mono&family=Roboto&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Things that Tailwind could not do */
+/* Things that are easier to do in CSS rather than in Tailwind */
 
 html {
   scroll-behavior: smooth;
 }
 
-.marker-hide::marker,
-.marker-hide::-webkit-details-marker {
-  display: none;
+.mint-button {
+  @apply font-bangers text-3xl rounded-3xl text-yellow-400 bg-green-500 bg-opacity-40 
+  px-14 py-2 cursor-pointer hover:bg-opacity-60 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-60
+   transition-all duration-150 mx-auto mt-5;
 }
 
-.scrollbar-hide {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+.nav-container {
+  @apply absolute top-full w-full z-30;
+  height: 353%;
 }
 
-details[open] summary svg {
-  transform: rotateX(-180deg);
+.last-planet {
+  bottom: -350%;
 }
 
-#roadmap {
-  background-image: url("/background-roadmap.svg");
+.about {
+  bottom: -200%;
+}
+
+.background {
+  background: url("/bg.svg") darkviolet;
   background-size: cover;
+  z-index: -10;
 }
 
-#rarity {
-  background-image: url("/background-rarity.svg");
-  background-size: cover;
+.nav-title {
+  @apply font-spaceMono;
+  font-size: 0.6rem;
+  letter-spacing: 0.7rem;
 }
 
-#footer {
-  background-image: url("/background-footer.svg");
-  background-size: cover;
+.team-role {
+  @apply font-spaceMono;
+  font-size: 1rem;
+  letter-spacing: 1rem;
 }
 
-#background {
-  z-index: -1;
-  background-image: url("/background-hero.svg");
+.nav-list-item {
+  background-image: linear-gradient(90deg, #59c2bb, #387e79);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+  cursor: pointer;
 }
-@media screen and (min-width: 1000px) {
-  #background {
-    background-size: cover;
+
+.nav-list-item:hover,
+.nav-list-item:focus-visible {
+  background-size: 100% 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .last-planet {
+    bottom: -200%;
+  }
+  .about {
+    bottom: -120%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    height: 490%;
+  }
+
+  .nav-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.85rem;
   }
 }
