@@ -17,7 +17,7 @@ html {
 
 .mint-button {
   @apply font-bangers text-3xl rounded-3xl text-yellow-400 bg-green-500 bg-opacity-40 
-  px-14 py-2 cursor-pointer hover:bg-opacity-40 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-40
+  px-14 py-2 cursor-pointer hover:bg-opacity-60 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-60
    transition-all duration-150 mx-auto mt-5;
 }
 

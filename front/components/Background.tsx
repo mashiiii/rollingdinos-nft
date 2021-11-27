@@ -77,7 +77,7 @@ export default function Background() {
             <img
               src="planets/planet5.svg"
               alt="Planet"
-              className="absolute left-10 w-16 h-16 md:left-48 last-planet"
+              className="absolute left-10 w-16 opacity-70 md:left-48 last-planet"
             />
           </div>
         </RellaxWrapper>
