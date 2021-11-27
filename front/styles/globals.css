@@ -8,17 +8,22 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #1b1b1b;
+}
+
+::selection {
+  background-color: rgb(89, 194, 187, 0.4);
 }
 
 .mint-button {
   @apply font-bangers text-3xl rounded-3xl text-yellow-400 bg-green-500 bg-opacity-40 
-  px-14 py-2 cursor-pointer hover:bg-opacity-60 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-60
+  px-14 py-2 cursor-pointer hover:bg-opacity-40 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-40
    transition-all duration-150 mx-auto mt-5;
 }
 
-.nav-container {
-  @apply absolute top-full w-full z-30;
-  height: 353%;
+/* This makes sure that nav stays at correct level without implementing abstract parent class */
+.nav-margin {
+  margin-bottom: -430px;
 }
 
 .last-planet {
@@ -30,7 +35,7 @@ html {
 }
 
 .background {
-  background: url("/bg.svg") darkviolet;
+  background: url("/bg.svg");
   background-size: cover;
   z-index: -10;
 }
@@ -71,8 +76,8 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-container {
-    height: 490%;
+  .nav-margin {
+    margin-bottom: -500px;
   }
 
   .nav-title {

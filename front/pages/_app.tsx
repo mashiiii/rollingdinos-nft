@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 import Background from "../components/Background";
+import { AnimatePresence } from "framer-motion";
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
@@ -33,7 +34,9 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Toaster position="top-right" />
-      <Component {...pageProps} />
+      <AnimatePresence>
+        <Component {...pageProps} />
+      </AnimatePresence>
       <Background />
     </>
   );
