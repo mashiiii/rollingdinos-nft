@@ -29,7 +29,7 @@ export default function Roadmap() {
     },
   ];
   return (
-    <section className="relative min-h-screen grid gap-10">
+    <section className="relative min-h-screen grid gap-10 roadmap">
       {roadmap.map((phase, index) => (
         <section
           key={phase.title}

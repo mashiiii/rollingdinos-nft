@@ -18,11 +18,11 @@ export default function Hero() {
   };
   return (
     <>
-      <img
+      {/* <img
         src="planets/planet1.svg"
         alt="Planet"
         className="absolute top-0 left-0 w-48 z-0 lg:w-64"
-      />
+      /> */}
       <p className="font-spaceMono text-xl font-bold absolute top-5 left-1/3 text-white md:left-20 md:top-1/3 lg:left-24">
         HURRY UP
       </p>
@@ -31,7 +31,7 @@ export default function Hero() {
           ROLLING <span className="text-yellow-400">DINOS</span>
         </h1>
         <button className="mint-button" onClick={handleMint}>
-          MINT NOW
+          MINT SOON
         </button>
       </section>
     </>
