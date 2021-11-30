@@ -8,13 +8,14 @@ export default function Team() {
     { nick: "Naqet", image: "/dino1.png", role: "Developer" },
   ];
   return (
-    <section className="flex flex-col gap-4 mb-60" id="team">
+  <>
+    <section className="flex flex-col gap-4" id="team">
       {team.map((member) => (
         <div
           key={member.nick}
           className="text-white grid place-items-center z-20 md:ml-80"
         >
-          <p className="font-bangers text-4xl my-2 text-green-500 opacity-90">
+          <p className="font-bangers text-4xl my-2 text-yellow-400">
             {member.nick}
           </p>
           <Image
@@ -27,5 +28,7 @@ export default function Team() {
         </div>
       ))}
     </section>
+    <img className="w-full" src="/about-bottom.svg" alt="Planet" />
+    </>
   );
 }

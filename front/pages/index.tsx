@@ -6,6 +6,7 @@ import Nav from "../components/Nav";
 import Roadmap from "../components/Roadmap";
 import Social from "../components/Social";
 import Team from "../components/Team";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <Roadmap />
         <Mission />
         <Team />
+	<Footer />
       </motion.div>
     </>
   );

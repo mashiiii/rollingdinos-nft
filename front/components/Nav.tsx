@@ -2,8 +2,7 @@ import React from "react";
 
 export default function Nav() {
   return (
-    // <div className="nav-container">
-    <nav className="nav-margin hidden z-50 bg-indigo-500 bg-opacity-60 rounded-3xl max-w-max px-6 py-10 md:grid md:sticky top-36 left-16 justify-center gap-3 text-white lg:left-48 xl:py-14 xl:left-64">
+    <nav className="nav-margin hidden z-50 bg-indigo-800 bg-opacity-70 rounded-3xl max-w-max px-6 py-10 md:grid md:sticky top-36 left-16 justify-center gap-3 text-yellow-400 lg:left-48 xl:py-14 xl:left-64">
       <div>
         <h3 className="nav-title mb-3">ROADMAP</h3>
         <ul className="text-lg grid gap-4 xl:text-2xl">
@@ -37,6 +36,5 @@ export default function Nav() {
         </ul>
       </div>
     </nav>
-    // </div>
   );
 }

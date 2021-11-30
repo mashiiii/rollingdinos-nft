@@ -16,13 +16,17 @@ html {
 }
 
 .roadmap {
-  background-image: url("/Untitled-2.png");
+  background-image: url("/roadmap-bg.svg");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-color: #FBBF24;
+}
+
+.mission, #team {
+  background-color: #AD800C; 
 }
 
 .mint-button {
-  @apply font-bangers text-3xl rounded-3xl text-purple-500 bg-yellow-400 
+  @apply font-bangers text-3xl rounded-3xl text-indigo-700 bg-yellow-400 
   px-14 py-2 cursor-pointer hover:bg-opacity-60 hover:px-12 focus-visible:px-12 focus-visible:bg-opacity-60
    transition-all duration-150 mx-auto mt-5;
 }
@@ -59,7 +63,7 @@ html {
 }
 
 .nav-list-item {
-  background-image: linear-gradient(90deg, #59c2bb, #387e79);
+  background-image: linear-gradient(90deg, #fcd34d, #f59e0b);
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
