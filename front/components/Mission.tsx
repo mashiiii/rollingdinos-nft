@@ -3,7 +3,7 @@ import React from "react";
 export default function Mission() {
   return (
     <>
-      <img className="w-full" src="/about-top.svg" alt="Planet" />
+      <img className="w-full" src="/mission-bg.png" alt="Planet" />
       <div className="mission w-full pb-40">
       <section className="z-10 flex flex-col place-items-center md:ml-80">
         <h3

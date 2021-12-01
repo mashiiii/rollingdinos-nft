@@ -22,7 +22,7 @@ html {
 }
 
 .mission, #team {
-  background-color: #AD800C; 
+  background-image: linear-gradient(90deg, #F2BF99, #F5CFB3 )
 }
 
 .mint-button {
