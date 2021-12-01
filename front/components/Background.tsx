@@ -14,7 +14,7 @@ export default function Background() {
             <img
               src="bg-hero.svg"
               alt="They are rolling your way"
-              className="opacity-80 px-5 absolute bottom-28 right-1/2 translate-x-1/2 lg:max-w-3xl lg:opacity-50"
+              className="opacity-80 px-5 absolute bottom-20 right-1/2 translate-x-1/2 lg:max-w-3xl lg:opacity-50"
             />
             <img
               src="planets/planet2.svg"
