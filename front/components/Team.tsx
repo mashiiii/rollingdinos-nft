@@ -16,17 +16,19 @@ export default function Team() {
         {team.map((member) => (
           <div
             key={member.nick}
-            className="text-white grid place-items-center text-indigo-700"
+            className="grid place-items-center text-indigo-700"
           >
             <p className="font-bangers text-4xl my-2">{member.nick}</p>
-            <Image
-              alt="Dino team member"
-              width={300}
-              height={300}
-              src={member.image}
-              className="rounded-3xl"
-              placeholder="blur"
-            />
+            <div className="w-72 h-72">
+              <Image
+                alt="Dino team member"
+                width={288}
+                height={288}
+                src={member.image}
+                className="rounded-3xl"
+                placeholder="blur"
+              />
+            </div>
             <p className="team-role my-2 ml-4">{member.role}</p>
           </div>
         ))}
