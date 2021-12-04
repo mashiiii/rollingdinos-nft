@@ -9,7 +9,7 @@ export default function Team() {
   return (
     <>
       <img className="w-full" src="/sections/mission-bg.svg" alt="Planet" />
-      <h2 id="team">Rolling Team</h2>
+      {/*<h2 id="team">Rolling Team</h2>*/}
       <section className="team-body flex flex-col md:flex-row justify-center gap-4 pt-10 flex-wrap xl:gap-10">
         {team.map((member) => (
           <div
