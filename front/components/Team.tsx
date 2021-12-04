@@ -1,12 +1,10 @@
 import React from "react";
-import Image from "next/image";
-import dino1 from "../public/sections/dino1.png";
 
 export default function Team() {
   const team = [
-    { nick: "Naqet", image: dino1, role: "Developer" },
-    { nick: "Naqet", image: dino1, role: "Developer" },
-    { nick: "Naqet", image: dino1, role: "Developer" },
+    { nick: "Naqet", image: "/sections/dino1.png", role: "Developer" },
+    { nick: "Naqet", image: "/sections/dino1.png", role: "Developer" },
+    { nick: "Naqet", image: "/sections/dino1.png", role: "Developer" },
   ];
   return (
     <>
@@ -19,7 +17,7 @@ export default function Team() {
             className="grid place-items-center text-indigo-700"
           >
             <p className="font-bangers text-4xl my-2">{member.nick}</p>
-            <div className="w-72 h-72">
+            {/*<div className="w-72 h-72">
               <Image
                 alt="Dino team member"
                 width={288}
@@ -27,8 +25,13 @@ export default function Team() {
                 src={member.image}
                 className="rounded-3xl"
                 placeholder="blur"
-              />
-            </div>
+		/> 
+            </div>*/}
+            <img
+              src={member.image}
+              alt="Dino team member"
+              className="w-72 h-72 rounded-3xl"
+            />
             <p className="team-role my-2 ml-4">{member.role}</p>
           </div>
         ))}
