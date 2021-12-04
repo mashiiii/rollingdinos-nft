@@ -7,7 +7,11 @@ module.exports = {
       spaceMono: ["Space Mono", "monospace"],
       roboto: ["Roboto", "Halvetica", "Arial"],
     },
-    extend: {},
+    extend: {
+      zIndex: {
+        1: "1",
+      },
+    },
   },
   variants: {
     extend: {},

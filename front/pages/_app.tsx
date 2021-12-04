@@ -33,7 +33,7 @@ const MyApp = ({ Component, pageProps }) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Toaster position="top-right" />
+      <Toaster position="bottom-left" />
       <AnimatePresence>
         <Component {...pageProps} />
       </AnimatePresence>

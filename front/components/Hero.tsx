@@ -5,31 +5,40 @@ export default function Hero() {
   const handleMint = () => {
     toast.error("Minting is not available yet.", {
       style: {
-        backgroundColor: "#FBBF24",
+        backgroundColor: "#4338CA",
         borderRadius: "25px",
-        color: "#8B5CF6",
+        color: "#FBBF24",
       },
       iconTheme: {
-        secondary: "#FBBF24",
-        primary: "#8B5CF6",
+        secondary: "#4338CA",
+        primary: "#FBBF24",
       },
     });
   };
   return (
     <>
-      <p className="font-spaceMono text-xl font-bold absolute top-5 left-1/3 text-white md:left-20 md:top-1/3 lg:left-24">
+      <p className="font-bangers text-xl font-bold absolute top-28 left-8 text-white">
         HURRY UP
       </p>
-      <section className="text-white relative z-10 w-screen h-screen flex flex-col justify-center">
+      <section className="text-white w-screen h-screen flex flex-col justify-center">
         <h1 className="font-bangers text-7xl text-center md:text-left md:ml-20 lg:text-9xl">
           ROLLING <span className="text-yellow-400">DINOS</span>
         </h1>
-	
-        <button className="mint-button" onClick={handleMint}>
-          MINT SOON
-        </button>
+
+        <div className="grid place-items-center mt-10 lg:mr-auto lg:ml-64">
+          <button className="yellow-button text-3xl" onClick={handleMint}>
+            MINT SOON
+          </button>
+          <p className="text-sm font-roboto text-center mt-2">
+            0.07ETH | MAX 2 PER TRANSACTION
+          </p>
+        </div>
       </section>
-    <img className="hidden xl:block w-96 h-96 absolute top-1/2 -translate-y-1/2 right-56 rounded-3xl" src="/dino.gif" alt="Dino gif" />
+      <img
+        className="hidden xl:block w-96 h-96 absolute top-1/2 -translate-y-1/2 right-56 rounded-3xl"
+        src="/sections/dino.gif"
+        alt="Dino gif"
+      />
     </>
   );
 }

@@ -1,56 +1,114 @@
+import Image from "next/image";
 import React from "react";
+import toast from "react-hot-toast";
+import dino1 from "../public/sections/dino1.png";
 
 export default function Roadmap() {
   const roadmap = [
     {
-      title: "They see us rolling",
-      points: ["1", "2", "3", "4", "5"],
-      image: "dino1.png",
+      title: "They see us rolling – they hatin‘",
+      percent: "0%",
+      description:
+        "Assigning 100 OG roles to early supporters, including special benefits.",
     },
     {
       title: "Keep rolling",
-      points: ["1", "2", "3", "4", "5"],
-      image: "dino1.png",
+      percent: "10%",
+      description:
+        "Launch of official holder exclusive Rolling Dino merch shop. 3 Rolling Dino NFTs giveaway for all Discord members.",
     },
     {
       title: "Roll another tree",
-      points: ["1", "2", "3", "4", "5"],
-      image: "dino1.png",
+      percent: "25%",
+      description:
+        "50% of all secondary royalty fees will be contributed to a community fund.",
     },
     {
-      title: "Come and roll together",
-      points: ["1", "2", "3", "4", "5"],
-      image: "dino1.png",
+      title: "Come together - roll together",
+      percent: "50%",
+      description:
+        "Exclusive Rolling Dinos NFT holder meetup. Starting to plan in-person events in different places around the globe.",
     },
     {
-      title: "Revive Dinos",
-      points: ["1", "2", "3", "4", "5"],
-      image: "dino1.png",
+      title: "Revive dinos",
+      percent: "75%",
+      description:
+        "5 ETH Giveaway - 1 ETH for 5 Rolling Dino holders each. Introducing the $ROLL token which can be obtained by staking a Rolling Dino NFT Holders will be able to mint 3d VX versions of their own Rolling Object along with a new VX Dino version using the $ROLL token! They will be playable in the metaverse giving lots of new possibilities such as special community events along with PvP which enables a play-to-earn mechanism and much more! ",
+    },
+    {
+      title: "Try to catch us riding dirty",
+      percent: "100%",
+      description:
+        "$ 10.000 donation to endangered animals & protecting rainforests. Per minted Dino; we will plant 1 tree. Activation of unique irl utilities depending on your rolling object. A wild afterparty: For 7-days straight we are hosting huge giveaways for Dino holders.",
     },
   ];
+
+  const handlePhaseTwo = () => {
+    toast.error("Phase 2 comming soon.", {
+      style: {
+        backgroundColor: "#4338CA",
+        borderRadius: "25px",
+        color: "#FBBF24",
+      },
+      iconTheme: {
+        secondary: "#4338CA",
+        primary: "#FBBF24",
+      },
+    });
+  };
   return (
     <>
-    <img className="w-full" src="/roadmap-top.svg" alt="Planet" />
-      <section className="relative min-h-screen grid gap-10 roadmap">
-        {roadmap.map((phase, index) => (
-          <section
-            key={phase.title}
-            id={"P" + (index + 1).toString()}
-            className="grid place-items-start font-spaceMono relative p-8 text-white md:place-items-center md:ml-64 md:pt-0 lg:ml-80"
-          >
-            <h3 className="ml-5 mb-2">{phase.title}</h3>
-            <ul className="w-60 h-40 bg-indigo-700 bg-opacity-70 rounded-3xl p-2 grid place-items-center z-20">
-              {phase.points.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
-            <img
-              src={phase.image}
-              alt="Sample dino"
-              className="w-40 h-40 rounded-3xl -mt-10 ml-28 z-10"
+      <img className="w-full" src="/sections/roadmap-top.svg" alt="Planet" />
+      <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers md:pb-20 lg:pb-5 xl:pb-20">
+        <h2 className="text-indigo-700 text-4xl grid place-items-center mb-10 xl:text-6xl">
+          <p>KEEP AN EYE OPEN -</p>
+          <p>THEY ARE ROLLING YOUR WAY</p>
+        </h2>
+        <div className="md:flex relative">
+          <div className="hidden xl:block absolute translate-y-10 -translate-x-32 z-1">
+            <Image
+              src={dino1}
+              width={300}
+              height={300}
+              placeholder="blur"
+              className="rounded-3xl"
             />
-          </section>
+          </div>
+          <p className="bg-indigo-700 rounded-3xl bg-opacity-70 max-w-lg p-4 text-white mx-2 text-center lg:m-auto xl:text-2xl xl:max-w-xl xl:translate-x-40">
+            Welcome to a collection of 10,000 Rolling Dinos NFTs - unique
+            non-fungible tokens living on the Etherium blockchain. Dinosaurs are
+            extinct, but they keep on rolling. Each rolling dino is
+            programmatically generated from over 100 possible traits, including
+            rolling objects, headwear, facial expressions, and more. Every
+            rolling object comes with a unique utility from which every Dino
+            holder can benefit - regardless of the rarity.
+          </p>
+        </div>
+        <h2 id="roadmap" className="text-indigo-700 pt-20 text-6xl text-center">
+          ROADMAP
+        </h2>
+        {roadmap.map((phase, index) => (
+          <div
+            key={phase.title}
+            className="my-20 md:gap-10 flex flex-col md:flex-row md:odd:flex-row-reverse"
+          >
+            <div className="relative mb-7 md:my-auto">
+              <h3 className="relative z-1 text-3xl pl-8 text-white">
+                {phase.title}
+              </h3>
+              <p className="absolute text-8xl -translate-y-20 text-indigo-700 opacity-70">
+                {phase.percent}
+              </p>
+            </div>
+            <p className="bg-indigo-700 rounded-3xl bg-opacity-70 p-4 text-white mx-2 text-center max-w-lg text-lg md:text-2xl md:my-auto">
+              {phase.description}
+            </p>
+          </div>
         ))}
+        <button className="purple-button" onClick={handlePhaseTwo}>
+          <p>Activation of Rolling Dino Phase 2:</p>
+          <p>Long live the dinos</p>
+        </button>
       </section>
     </>
   );
