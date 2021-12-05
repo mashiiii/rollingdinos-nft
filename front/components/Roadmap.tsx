@@ -8,38 +8,50 @@ export default function Roadmap() {
     {
       title: "They see us rolling – they hatin‘",
       percent: "0%",
-      description:
+      description: [
         "Assigning 100 OG roles to early supporters, including special benefits.",
+      ],
     },
     {
       title: "Keep rolling",
       percent: "10%",
-      description:
-        "Launch of official holder exclusive Rolling Dino merch shop. 3 Rolling Dino NFTs giveaway for all Discord members.",
+      description: [
+        "Launch of official holder exclusive Rolling Dino merch shop.",
+        "3 Rolling Dino NFTs giveaway for all Discord members.",
+      ],
     },
     {
       title: "Roll another tree",
       percent: "25%",
-      description:
+      description: [
         "50% of all secondary royalty fees will be contributed to a community fund.",
+        "3 Rolling Dino NFTs giveaway for all Discord members.",
+      ],
     },
     {
       title: "Come together - roll together",
       percent: "50%",
-      description:
+      description: [
         "Exclusive Rolling Dinos NFT holder meetup. Starting to plan in-person events in different places around the globe.",
+      ],
     },
     {
       title: "Revive dinos",
       percent: "75%",
-      description:
-        "5 ETH Giveaway - 1 ETH for 5 Rolling Dino holders each. Introducing the $ROLL token which can be obtained by staking a Rolling Dino NFT Holders will be able to mint 3d VX versions of their own Rolling Object along with a new VX Dino version using the $ROLL token! They will be playable in the metaverse giving lots of new possibilities such as special community events along with PvP which enables a play-to-earn mechanism and much more! ",
+      description: [
+        "5 ETH Giveaway - 1 ETH for 5 Rolling Dino holders each.",
+        "Introducing the $ROLL token which can be obtained by staking a Rolling Dino NFT Holders will be able to mint 3d VX versions of their own Rolling Object along with a new VX Dino version using the $ROLL token!",
+        "They will be playable in the metaverse giving lots of new possibilities such as special community events along with PvP which enables a play-to-earn mechanism and much more!",
+      ],
     },
     {
       title: "Try to catch us riding dirty",
       percent: "100%",
-      description:
-        "$ 10.000 donation to endangered animals & protecting rainforests. Per minted Dino; we will plant 1 tree. Activation of unique irl utilities depending on your rolling object. A wild afterparty: For 7-days straight we are hosting huge giveaways for Dino holders.",
+      description: [
+        "$ 10.000 donation to endangered animals & protecting rainforests. Per minted Dino; we will plant 1 tree.",
+        "Activation of unique irl utilities depending on your rolling object.",
+        "A wild afterparty: For 7-days straight we are hosting huge giveaways for Dino holders.",
+      ],
     },
   ];
 
@@ -97,15 +109,17 @@ export default function Roadmap() {
             className="my-20 md:gap-10 flex flex-col md:flex-row md:odd:flex-row-reverse"
           >
             <div className="relative mb-7 md:my-auto">
-              <h3 className="relative z-1 text-3xl pl-8 text-white">
+              <h3 className="relative z-1 text-3xl pl-8 text-indigo-700">
                 {phase.title}
               </h3>
-              <p className="absolute text-8xl -translate-y-20 text-indigo-700 opacity-70">
+              <p className="absolute text-8xl -translate-y-20 text-white opacity-70">
                 {phase.percent}
               </p>
             </div>
-            <p className="bg-indigo-700 rounded-3xl bg-opacity-70 p-4 text-white mx-2 text-center max-w-lg text-lg md:text-2xl md:my-auto">
-              {phase.description}
+            <p className="bg-indigo-700 rounded-3xl bg-opacity-70 p-4 text-white mx-2 text-center flex flex-col gap-2 max-w-lg text-lg md:text-2xl md:my-auto">
+              {phase.description.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </p>
           </div>
         ))}
