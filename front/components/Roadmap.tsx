@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import toast from "react-hot-toast";
-import dino1 from "../public/sections/dino1.png";
+import dino1 from "../public/dinos/dino1.jpeg";
 
 export default function Roadmap() {
   const roadmap = [
@@ -58,8 +58,12 @@ export default function Roadmap() {
   };
   return (
     <>
-      <img className="w-full" src="/sections/roadmap-top.svg" alt="Planet" />
-      <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers md:pb-20 lg:pb-5 xl:pb-20">
+      <img
+        className="w-full -mb-px"
+        src="/sections/roadmap-top.svg"
+        alt="Planet"
+      />
+      <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers pb-10 lg:pb-24 xl:pb-20">
         <h2 className="text-indigo-700 text-4xl grid place-items-center mb-10 xl:text-6xl">
           <p>KEEP AN EYE OPEN -</p>
           <p>THEY ARE ROLLING YOUR WAY</p>

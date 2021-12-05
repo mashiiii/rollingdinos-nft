@@ -27,7 +27,7 @@ html {
 }
 
 #team {
-  /* @apply font-bangers text-7xl text-indigo-700 text-center pt-20; */
+  @apply font-bangers text-7xl text-indigo-700 text-center pt-20;
   background: #f2bf99;
 }
 

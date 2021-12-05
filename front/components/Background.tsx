@@ -7,9 +7,9 @@ export default function Background() {
       <div className="w-screen h-screen fixed top-0 left-0 background" />
       <div
         className="absolute top-0 left-0 w-screen h-auto"
-        style={{ zIndex: "-5" }}
+        style={{ zIndex: "-1" }}
       >
-        <RellaxWrapper xs={2} tablet={4} desktop={4} zIndex={-5}>
+        <RellaxWrapper xs={0} tablet={4} desktop={4}>
           <div className="relative h-screen w-screen">
             <img
               src="sections/slogan.svg"
@@ -19,7 +19,7 @@ export default function Background() {
             <img
               src="planets/planet1.svg"
               alt="Planet"
-              className="absolute w-20 -bottom-10 right-1/4 md:right-20"
+              className="hidden md:block absolute w-20 -bottom-10 right-1/4 md:right-20"
             />
             <img
               src="planets/planet2.svg"
