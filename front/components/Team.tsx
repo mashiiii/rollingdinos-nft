@@ -7,7 +7,7 @@ import dev from "../public/dinos/Developer.jpeg";
 
 export default function Team() {
   const team = [
-    { nick: "Rolling Lana", image: lana, role: "Owner" },
+    { nick: "Rolling Rex", image: lana, role: "Owner" },
     { nick: "Rolling Flecki", image: eddie, role: "Founder" },
     { nick: "Rolling Naqet", image: dev, role: "Developer" },
     { nick: "Rolling Paletti", image: community, role: "Manager" },

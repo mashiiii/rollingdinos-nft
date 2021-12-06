@@ -34,7 +34,7 @@ html {
 /* Buttons */
 
 .yellow-button {
-  @apply font-bangers text-3xl rounded-3xl text-indigo-700 bg-yellow-400 
+  @apply font-bangers text-2xl xs:text-3xl rounded-3xl text-indigo-700 bg-yellow-400 
   px-20 py-2 cursor-pointer hover:bg-opacity-60 focus-visible:bg-opacity-60
    transition-all duration-150;
 }

@@ -75,7 +75,7 @@ export default function Roadmap() {
         src="/sections/roadmap-top.svg"
         alt="Planet"
       />
-      <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers pb-10 lg:pb-24 xl:pb-20">
+      <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers pb-10 md:pb-12 lg:pb-20 xl:pb-0">
         <h2 className="text-indigo-700 text-4xl grid place-items-center mb-10 xl:text-6xl">
           <p>KEEP AN EYE OPEN -</p>
           <p>THEY ARE ROLLING YOUR WAY</p>

@@ -8,6 +8,9 @@ module.exports = {
       roboto: ["Roboto", "Halvetica", "Arial"],
     },
     extend: {
+      screens: {
+        xs: "321px",
+      },
       zIndex: {
         1: "1",
       },
