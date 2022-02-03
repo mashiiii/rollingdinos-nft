@@ -11,10 +11,10 @@ export default function Background() {
       >
         <RellaxWrapper xs={0} tablet={4} desktop={4}>
           <div className="relative h-screen w-screen">
-            <img
+            <img 
               src="sections/slogan.svg"
               alt="They are rolling your way"
-              className="opacity-80 px-5 absolute bottom-12 right-1/2 translate-x-1/2 lg:max-w-3xl lg:opacity-50"
+              className="hidden opacity-80 px-5 absolute bottom-12 right-1/2 translate-x-1/2 lg:max-w-3xl lg:opacity-50"
             />
             <img
               src="planets/planet1.svg"

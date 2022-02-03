@@ -70,13 +70,13 @@ export default function Roadmap() {
   };
   return (
     <>
-      <img
+      {/*<img
         className="w-full -mb-px"
         src="/sections/roadmap-top.svg"
         alt="Planet"
-      />
+      />*/}
       <section className="min-h-screen min-w-full grid place-items-center roadmap font-bangers pb-10 md:pb-12 lg:pb-20 xl:pb-0">
-        <h2 className="text-indigo-700 text-4xl grid place-items-center mb-10 xl:text-6xl">
+        <h2 className="text-blue-600/100 text-4xl grid place-items-center mb-10 xl:text-6xl">
           <p>KEEP AN EYE OPEN -</p>
           <p>THEY ARE ROLLING YOUR WAY</p>
         </h2>
