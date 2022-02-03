@@ -6,7 +6,7 @@ import Angel from "../public/dinos/Angel.png";
 export default function Roadmap() {
   const roadmap = [
     {
-      title: "They see us rolling – they hatin‘",
+      title: "They see us rolling ‘",
       percent: "0%",
       description: [
         "Assigning 100 OG roles to early supporters, including special benefits.",
@@ -16,8 +16,8 @@ export default function Roadmap() {
       title: "Keep rolling",
       percent: "10%",
       description: [
-        "Launch of official holder exclusive Rolling Dino merch shop.",
-        "3 Rolling Dino NFTs giveaway for all Discord members.",
+        "Launch of official holder exclusive Rolling Crypto Pug merch shop.",
+        "3 Rolling Crypto Pug NFTs giveaway for all Discord members.",
       ],
     },
     {
@@ -91,12 +91,11 @@ export default function Roadmap() {
             />
           </div>
           <p className="bg-indigo-700 rounded-3xl bg-opacity-70 max-w-lg p-4 text-white mx-2 text-center lg:m-auto xl:text-2xl xl:max-w-xl xl:translate-x-40">
-            Welcome to a collection of 10,000 Rolling Dinos NFTs - unique
-            non-fungible tokens living on the Etherium blockchain. Dinosaurs are
-            extinct, but they keep on rolling. Each rolling dino is
-            programmatically generated from over 100 possible traits, including
-            rolling objects, headwear, facial expressions, and more. Every
-            rolling object comes with a unique utility from which every Dino
+            Welcome to a collection of 101 pieces for auction - unique
+            non-fungible tokens living on the Etherium blockchain. Crypto Pugs are
+            very nice, but they keep on rolling. Each rolling dino is
+            programmatically generated from over 100 possible traits. Every
+            rolling object comes with a unique utility from which every Crypto Pug
             holder can benefit - regardless of the rarity.
           </p>
         </div>
@@ -124,8 +123,8 @@ export default function Roadmap() {
           </div>
         ))}
         <button className="purple-button" onClick={handlePhaseTwo}>
-          <p>Activation of Rolling Dino Phase 2:</p>
-          <p>Long live the dinos</p>
+          <p>Activation of Crypto Pug Phase 2:</p>
+          {/*<p>Long live the </p>*/}
         </button>
       </section>
     </>

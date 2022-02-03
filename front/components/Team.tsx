@@ -1,26 +1,28 @@
 import React from "react";
 import Image from "next/image";
-import eddie from "../public/dinos/Eddie.jpeg";
-import lana from "../public/dinos/Lana.jpeg";
-import community from "../public/dinos/Community.jpeg";
-import dev from "../public/dinos/Developer.jpeg";
+import Ale_Alfaro from "../public/team/Ale_Alfaro.png";
+import Ed_Herrera from "../public/team/Ed_Herrera.png";
+import Kush from "../public/team/Kush.png";
+import Pablo_Segali from "../public/team/Pablo_Segali.png";
+import Sassy_Puerca from "../public/team/Sassy_Puerca.png";
 
 export default function Team() {
   const team = [
-    { nick: "Rolling Rex", image: lana, role: "Owner" },
-    { nick: "Rolling Flecki", image: eddie, role: "Founder" },
-    { nick: "Rolling Naqet", image: dev, role: "Developer" },
-    { nick: "Rolling Paletti", image: community, role: "Manager" },
+    { nick: "Ed_Herrera", image: Ed_Herrera },
+    { nick: "Ale_Alfaro", image: Ale_Alfaro },
+    { nick: "Pablo_Segali", image: Pablo_Segali },
+    { nick: "Kush", image: Kush },
+    { nick: "Sassy_Puerca", image: Sassy_Puerca },
   ];
   return (
     <>
-      <img
+      {/*<img
         className="w-full -my-px"
         src="/sections/mission-bg.svg"
         alt="Planet"
-      />
-      <h2 id="team">Rolling Team</h2>
-      <section className="team-body flex justify-center gap-4 pt-10 flex-wrap xl:gap-10">
+      />*/}
+      <h2 id="team">Team</h2>
+      <section className="team-body flex justify-center gap-2 pt-10 flex-wrap xl:gap-10">
         {team.map((member) => (
           <div
             key={member.nick}
@@ -28,14 +30,14 @@ export default function Team() {
           >
             <p className="font-bangers text-4xl my-2">{member.nick}</p>
             <Image
-              alt="Dino team member"
+              alt="team member"
               width={288}
               height={288}
               src={member.image}
               className="rounded-3xl"
               placeholder="blur"
             />
-            <p className="team-role my-2 ml-4">{member.role}</p>
+            {/*<p className="team-role my-2 ml-4">{member.role}</p>*/}
           </div>
         ))}
       </section>
