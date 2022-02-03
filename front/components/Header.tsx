@@ -5,7 +5,7 @@ const Header = () => {
     <header className="text-white fixed top-0 right-0 w-full p-4 z-10 bg-indigo-700 bg-opacity-80 flex justify-between font-bangers lg:py-6 lg:px-10">
       <h1 className="text-3xl">
         <a href="#">
-          ROLLING <span className="text-yellow-400">DINOS</span>
+          CRYPTO <span className="text-yellow-400">PUGS</span>
         </a>
       </h1>
       <ul className="flex gap-8 text-xl">

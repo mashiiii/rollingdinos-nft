@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import toast from "react-hot-toast";
-import dino1 from "../public/dinos/dino1.jpeg";
+import Angel from "../public/dinos/Angel.png";
 
 export default function Roadmap() {
   const roadmap = [
@@ -83,7 +83,7 @@ export default function Roadmap() {
         <div className="md:flex relative">
           <div className="hidden xl:block absolute translate-y-10 -translate-x-32 z-1">
             <Image
-              src={dino1}
+              src={Angel}
               width={300}
               height={300}
               placeholder="blur"

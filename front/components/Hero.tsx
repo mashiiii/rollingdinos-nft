@@ -22,7 +22,7 @@ export default function Hero() {
       </p>
       <section className="text-white w-screen h-screen flex flex-col justify-center z-1">
         <h1 className="font-bangers text-7xl text-center md:text-left md:ml-20 lg:text-9xl">
-          ROLLING <span className="text-yellow-400">DINOS</span>
+          CRYPTO <span className="text-yellow-400">PUGS</span>
         </h1>
 
         <div className="grid place-items-center mt-10 lg:mr-auto lg:ml-64">
