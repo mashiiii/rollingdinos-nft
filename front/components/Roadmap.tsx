@@ -6,14 +6,14 @@ import Angel from "../public/dinos/Angel.png";
 export default function Roadmap() {
   const roadmap = [
     {
-      title: "They see us rolling ‘",
-      percent: "0%",
+      title: "",
+      percent: "",
       description: [
-        "Assigning 100 OG roles to early supporters, including special benefits.",
+        "Phase 1: CryptoPug World &amp; La Puerca&quot; is the first phase of Harmony Ark Metaverse.",
       ],
     },
     {
-      title: "Keep rolling",
+      title: "",
       percent: "10%",
       description: [
         "Launch of official holder exclusive Rolling Crypto Pug merch shop.",
@@ -21,7 +21,7 @@ export default function Roadmap() {
       ],
     },
     {
-      title: "Roll another tree",
+      title: "",
       percent: "25%",
       description: [
         "50% of all secondary royalty fees will be contributed to a community fund.",
@@ -29,14 +29,14 @@ export default function Roadmap() {
       ],
     },
     {
-      title: "Come together - roll together",
+      title: "",
       percent: "50%",
       description: [
         "Exclusive Rolling Dinos NFT holder meetup. Starting to plan in-person events in different places around the globe.",
       ],
     },
     {
-      title: "Revive dinos",
+      title: "",
       percent: "75%",
       description: [
         "5 ETH Giveaway - 1 ETH for 5 Rolling Dino holders each.",
@@ -45,7 +45,7 @@ export default function Roadmap() {
       ],
     },
     {
-      title: "Try to catch us riding dirty",
+      title: "",
       percent: "100%",
       description: [
         "$ 10.000 donation to endangered animals & protecting rainforests. Per minted Dino; we will plant 1 tree.",
