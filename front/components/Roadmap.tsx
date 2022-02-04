@@ -136,10 +136,10 @@ export default function Roadmap() {
             </p>
           </div>
         ))}
-        <button className="purple-button" onClick={handlePhaseTwo}>
+        {/*<button className="purple-button" onClick={handlePhaseTwo}>
           <p>Activation of Crypto Pug Phase 2:</p>
-          {/*<p>Long live the </p>*/}
-        </button>
+          <p>Long live the </p>
+              </button>*/}
       </section>
     </>
   );
