@@ -4,7 +4,6 @@ import Ale_Alfaro from "../public/team/Ale_Alfaro.png";
 import Ed_Herrera from "../public/team/Ed_Herrera.png";
 import Kush from "../public/team/Kush.png";
 import Pablo_Segali from "../public/team/Pablo_Segali.png";
-import Sassy_Puerca from "../public/team/Sassy_Puerca.png";
 
 export default function Team() {
   const team = [
@@ -12,7 +11,6 @@ export default function Team() {
     { nick: "Ale_Alfaro", image: Ale_Alfaro },
     { nick: "Pablo_Segali", image: Pablo_Segali },
     { nick: "Kush", image: Kush },
-    { nick: "Sassy_Puerca", image: Sassy_Puerca },
   ];
   return (
     <>

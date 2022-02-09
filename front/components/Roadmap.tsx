@@ -109,11 +109,11 @@ export default function Roadmap() {
             non-fungible tokens living on the Etherium blockchain. Crypto Pugs are
             very nice, but they keep on rolling. Each rolling dino is
             programmatically generated from over 100 possible traits. Every
-            rolling object comes with a unique utility from which every Crypto Pug
+            rolling object comes with a unique utility from which every Haf Metavers
             holder can benefit - regardless of the rarity.
           </p>
         </div>
-        <h2 id="roadmap" className="text-indigo-700 pt-20 text-6xl text-center">
+        <h2 id="roadmap" className="text-indigo-700 pt-20 text-6xl text-center my-10">
           ROADMAP
         </h2>
         {roadmap.map((phase, index) => (

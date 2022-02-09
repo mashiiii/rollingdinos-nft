@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Rolling Dinos</title>
+        <title>Haf Metaverse</title>
       </Head>
       <motion.div
         initial={{ opacity: 0 }}
