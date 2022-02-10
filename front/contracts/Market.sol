@@ -27,28 +27,6 @@ contract NFTMarket is ReentrancyGuard {
     address payable owner;
     uint256 price;
     bool sold;
-	uint strength;
-	uint constitution;
-	uint endurance;
-	uint reflex;
-	uint dexterity;
-	uint fortitude;
-	uint athletics;
-	
-	uint intelligence;
-	uint wisdom;
-	uint charisma;
-	uint sleight of hand;
-	uint stealth;
-	uint survival;
-	uint willpower;
-	
-	uint deception;
-	uint perception;
-	uint persuasion;
-	uint charisma;
-	uint intimidation;
-	uint medicine;
   }
 
   mapping(uint256 => MarketItem) private idToMarketItem;
@@ -61,29 +39,6 @@ contract NFTMarket is ReentrancyGuard {
     address owner,
     uint256 price,
     bool sold
-	
-	uint strength;
-	uint constitution;
-	uint endurance;
-	uint reflex;
-	uint dexterity;
-	uint fortitude;
-	uint athletics;
-	
-	uint intelligence;
-	uint wisdom;
-	uint charisma;
-	uint sleight of hand;
-	uint stealth;
-	uint survival;
-	uint willpower;
-	
-	uint deception;
-	uint perception;
-	uint persuasion;
-	uint charisma;
-	uint intimidation;
-	uint medicine;
   );
 
   /* Returns the listing price of the contract */
@@ -95,28 +50,8 @@ contract NFTMarket is ReentrancyGuard {
   function createMarketItem(
     address nftContract,
     uint256 tokenId,
-    uint256 price,
-	uint strength,
-	uint constitution,
-	uint endurance,
-	uint reflex,
-	uint dexterity,
-	uint fortitude,
-	uint athletics,
-	uint intelligence,
-	uint wisdom,
-	uint charisma,
-	uint sleight of hand,
-	uint stealth,
-	uint survival,
-	uint willpower,
-	uint deception,
-	uint perception,
-	uint persuasion,
-	uint charisma,
-	uint intimidation,
-	uint medicine) 
-	public payable nonReentrant {
+    uint256 price
+  ) public payable nonReentrant {
     require(price > 0, "Price must be at least 1 wei");
     require(msg.value == listingPrice, "Price must be equal to listing price");
 
@@ -130,26 +65,6 @@ contract NFTMarket is ReentrancyGuard {
       payable(msg.sender),
       payable(address(0)),
       price,
-	  strength,
-	  constitution,
-	  endurance,
-	  reflex,
-	  dexterity,
-	  fortitude,
-	  athletics,
-	  intelligence,
-	  wisdom,
-	  charisma,
-	  sleight of hand,
-	  stealth,
-	  survival,
-	  willpower,
-	  deception,
-	  perception,
-	  persuasion,
-	  charisma,
-	  intimidation,
-	  medicine,
       false
     );
 
@@ -162,26 +77,6 @@ contract NFTMarket is ReentrancyGuard {
       msg.sender,
       address(0),
       price,
-	  strength,
-	  constitution,
-	  endurance,
-	  reflex,
-	  dexterity,
-	  fortitude,
-	  athletics,
-	  intelligence,
-	  wisdom,
-	  charisma,
-	  sleight of hand,
-	  stealth,
-	  survival,
-	  willpower,
-	  deception,
-	  perception,
-	  persuasion,
-	  charisma,
-	  intimidation,
-	  medicine,
       false
     );
   }
