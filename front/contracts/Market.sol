@@ -10,6 +10,7 @@ import "hardhat/console.sol";
 contract NFTMarket is ReentrancyGuard {
   using Counters for Counters.Counter;
   Counters.Counter private _itemIds;
+  Counters.Counter private _auctionIds;
   Counters.Counter private _itemsSold;
 
   address payable owner;
@@ -29,7 +30,18 @@ contract NFTMarket is ReentrancyGuard {
     bool sold;
   }
 
+  struct AuctionItem {
+    uint auctionId;
+    address nftContract;
+    uint256 tokenId;
+    address payable seller;
+    address payable owner;
+    uint256 highest_bid;
+    bool sold;
+  }
+
   mapping(uint256 => MarketItem) private idToMarketItem;
+  mapping(uint256 => AuctionItem) private idToAuctionItem;
 
   event MarketItemCreated (
     uint indexed itemId,
@@ -38,6 +50,16 @@ contract NFTMarket is ReentrancyGuard {
     address seller,
     address owner,
     uint256 price,
+    bool sold
+  );
+
+  event AuctionItemCreated (
+    uint indexed auctionId,
+    address indexed nftContract,
+    uint256 indexed tokenId,
+    address seller,
+    address owner,
+    uint256 highest_bid,
     bool sold
   );
 
@@ -53,7 +75,6 @@ contract NFTMarket is ReentrancyGuard {
     uint256 price
   ) public payable nonReentrant {
     require(price > 0, "Price must be at least 1 wei");
-    require(msg.value == listingPrice, "Price must be equal to listing price");
 
     _itemIds.increment();
     uint256 itemId = _itemIds.current();
@@ -80,6 +101,41 @@ contract NFTMarket is ReentrancyGuard {
       false
     );
   }
+
+/* Places an item for sale on the marketplace */
+  function createAuctionItem(
+    address nftContract,
+    uint256 tokenId,
+    uint256 highest_bid
+  ) public payable nonReentrant {
+    require(price > 0, "Price must be at least 1 wei");
+
+    _auctionIds.increment();
+    uint256 auctionId = _auctionIds.current();
+  
+    idToAuctionItem[itemId] =  AuctionItem(
+      auctionId,
+      nftContract,
+      tokenId,
+      payable(msg.sender),
+      payable(address(0)),
+      highest_bid,
+      false
+    );
+
+    IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
+
+    emit AuctionItemCreated(
+      auctionId,
+      nftContract,
+      tokenId,
+      msg.sender,
+      address(0),
+      highest_bid,
+      false
+    );
+  }
+
 
   /* Creates the sale of a marketplace item */
   /* Transfers ownership of the item, as well as funds between parties */
