@@ -12,6 +12,7 @@ contract NFTMarket is ReentrancyGuard {
   Counters.Counter private _itemIds;
   Counters.Counter private _auctionIds;
   Counters.Counter private _itemsSold;
+  Counters.Counter private _auctionSold;
 
   address payable owner;
   uint256 listingPrice = 0.025 ether;
@@ -133,7 +134,7 @@ contract NFTMarket is ReentrancyGuard {
       address(0),
       highest_bid,
       false
-    );
+    ); 
   }
 
 
@@ -155,17 +156,56 @@ contract NFTMarket is ReentrancyGuard {
     payable(owner).transfer(listingPrice);
   }
 
+  /* Creates the sale of a Auctionitem */
+  /* Transfers ownership of the item, as well as funds between parties */
+  function createAuctionSale(
+    address nftContract,
+    uint256 auctionId
+    ) public payable nonReentrant {
+    uint highest_bid = idToAuctionItem[auctionId].highest_bid;
+    uint tokenId = idToAuctionItem[auctionId].tokenId;
+    require(msg.value > highest_bid, "Please submit the asking price in order to complete the purchase");
+
+    idToAuctionItem[auctionId].highest_bid=msg.value;
+    idToAuctionItem[auctionId].seller.transfer(msg.value);
+    IERC721(nftContract).transferFrom(address(this), msg.sender, tokenId);
+    idToAuctionItem[auctionId].owner = payable(msg.sender);
+    idToAuctionItem[auctionId].sold = true;
+    _auctionSold.increment();
+    payable(owner).transfer(listingPrice);
+  }
+
   /* Returns all unsold market items */
   function fetchMarketItems() public view returns (MarketItem[] memory) {
     uint itemCount = _itemIds.current();
     uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
     uint currentIndex = 0;
 
+
     MarketItem[] memory items = new MarketItem[](unsoldItemCount);
     for (uint i = 0; i < itemCount; i++) {
       if (idToMarketItem[i + 1].owner == address(0)) {
         uint currentId = i + 1;
         MarketItem storage currentItem = idToMarketItem[currentId];
+        items[currentIndex] = currentItem;
+        currentIndex += 1;
+      }
+    }
+    return items;
+  }
+
+  /* Returns all unsold market items */
+  function fetchAuctionItems() public view returns (AuctionItem[] memory) {
+    uint itemCount = _auctionIds.current();
+    uint unsoldItemCount = _auctionIds.current() - _auctionSold.current();
+    uint currentIndex = 0;
+    
+
+    AuctionItem[] memory items = new AuctionItem[](unsoldItemCount);
+    for (uint i = 0; i < itemCount; i++) {
+      if (idToAuctionItem[i + 1].owner == address(0)) {
+        uint currentId = i + 1;
+        AuctionItem storage currentItem = idToAuctionItem[currentId];
         items[currentIndex] = currentItem;
         currentIndex += 1;
       }
@@ -197,8 +237,33 @@ contract NFTMarket is ReentrancyGuard {
     return items;
   }
 
+  /* Returns onlyl items that a user has purchased */
+  function fetchMyAuctions() public view returns (AuctionItem[] memory) {
+    uint totalItemCount = _auctionIds.current();
+    uint itemCount = 0;
+    uint currentIndex = 0;
+
+    for (uint i = 0; i < totalItemCount; i++) {
+      if (idToAuctionItem[i + 1].owner == msg.sender) {
+        itemCount += 1;
+      }
+    }
+
+    AuctionItem[] memory items = new AuctionItem[](itemCount);
+    for (uint i = 0; i < totalItemCount; i++) {
+      if (idToAuctionItem[i + 1].owner == msg.sender) {
+        uint currentId = i + 1;
+        AuctionItem storage currentItem = idToAuctionItem[currentId];
+        items[currentIndex] = currentItem;
+        currentIndex += 1;
+      }
+    }
+    return items;
+  }
+
+
   /* Returns only items a user has created */
-  function fetchItemsCreated() public view returns (MarketItem[] memory) {
+  /*function fetchItemsCreated() public view returns (MarketItem[] memory) {
     uint totalItemCount = _itemIds.current();
     uint itemCount = 0;
     uint currentIndex = 0;
@@ -219,5 +284,5 @@ contract NFTMarket is ReentrancyGuard {
       }
     }
     return items;
-  }
+  }*/
 }
