@@ -109,12 +109,12 @@ contract NFTMarket is ReentrancyGuard {
     uint256 tokenId,
     uint256 highest_bid
   ) public payable nonReentrant {
-    require(price > 0, "Price must be at least 1 wei");
+    require(highest_bid > 0, "Price must be at least 1 wei");
 
     _auctionIds.increment();
     uint256 auctionId = _auctionIds.current();
   
-    idToAuctionItem[itemId] =  AuctionItem(
+    idToAuctionItem[auctionId] =  AuctionItem(
       auctionId,
       nftContract,
       tokenId,
