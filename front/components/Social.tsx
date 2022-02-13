@@ -7,7 +7,7 @@ export default function Social() {
       <ul className="flex flex-col gap-4">
         <li className="rounded-full p-3 grid place-items-center bg-indigo-700 cursor-pointer hover:bg-opacity-60 focus-visible:bg-opacity-60 transition-all duration-150">
           <a
-            href="https://discord.gg/nupgeU695Q"
+            href="https://discord.gg/DhRAHrm6Tu"
             rel="noreferrer"
             target="_blank"
           >
@@ -16,7 +16,7 @@ export default function Social() {
         </li>
         <li className="rounded-full p-3 grid place-items-center bg-indigo-700 cursor-pointer hover:bg-opacity-60 focus-visible:bg-opacity-60 transition-all duration-150">
           <a
-            href="https://twitter.com/RollingDinos"
+            href="https://twitter.com/haf_metaverse"
             rel="noreferrer"
             target="_blank"
           >
