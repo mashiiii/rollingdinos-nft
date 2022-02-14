@@ -20,7 +20,7 @@ import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
 const Home = () => {
 
   const [fileUrl, setFileUrl] = useState(null)
-  const [formInput, updateFormInput] = useState({ price: '', name: '', description: '' })
+  const [formInput, updateFormInput] = useState({ highest_bid: '', name: '', description: '' })
   const router = useRouter()
 
   async function onChange(e) {
@@ -39,8 +39,8 @@ const Home = () => {
     }  
   }
   async function createMarket() {
-    const { name, description, price } = formInput
-    if (!name || !description || !price || !fileUrl) return
+    const { name, description, highest_bid } = formInput
+    if (!name || !description || !highest_bid || !fileUrl) return
     /* first, upload to IPFS */
     const data = JSON.stringify({
       name, description, image: fileUrl
@@ -69,14 +69,14 @@ const Home = () => {
     let value = event.args[2]
     let tokenId = value.toNumber()
 
-    const price = ethers.utils.parseUnits(formInput.price, 'ether')
+    const highest_bid = ethers.utils.parseUnits(formInput.highest_bid, 'ether')
   
     /* then list the item for sale on the marketplace */
     contract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
     let listingPrice = await contract.getListingPrice()
     listingPrice = listingPrice.toString()
 
-    transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
+    transaction = await contract.createMarketItem(nftaddress, tokenId, highest_bid, { value: '0' })
     await transaction.wait()
     router.push('/')
   }
@@ -112,9 +112,9 @@ const Home = () => {
           onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
         />
         <input
-          placeholder="Asset Price in Eth"
+          placeholder="Starting bid in Eth"
           className="mt-2 border rounded p-4"
-          onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
+          onChange={e => updateFormInput({ ...formInput, highest_bid: e.target.value })}
         />
         <input
           type="file"

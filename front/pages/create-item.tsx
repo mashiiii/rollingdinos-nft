@@ -76,7 +76,7 @@ const Home = () => {
     let listingPrice = await contract.getListingPrice()
     listingPrice = listingPrice.toString()
 
-    transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
+    transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: '0' })
     await transaction.wait()
     router.push('/')
   }
@@ -99,11 +99,11 @@ const Home = () => {
         <Roadmap />
         <Team />*/}
 
-    <div className="flex justify-center mt-56" >
+    <div className="flex justify-center mt-40" >
       <div className="w-1/2 flex flex-col pb-12">
         <input 
           placeholder="Asset Name"
-          className="mt-8 border rounded p-4 mt-56"
+          className="mt-8 border rounded p-4 mt-40"
           onChange={e => updateFormInput({ ...formInput, name: e.target.value })}
         />
         <textarea
