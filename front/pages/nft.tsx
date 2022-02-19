@@ -57,6 +57,7 @@ const Home = () => {
     setLoadingState('loaded') 
   }
   async function buyNft(nft) {
+    console.log('here')
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)

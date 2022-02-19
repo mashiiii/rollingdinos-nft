@@ -1,5 +1,4 @@
 import React from "react";
-import logo_final from "../public/dinos/logo_final.png";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from 'web3';
 import { ethers } from "ethers"
